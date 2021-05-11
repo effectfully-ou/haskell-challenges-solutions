@@ -15,7 +15,7 @@ import           System.Random
 import           System.Timeout
 
 hardcore :: Bool
-hardcore = False
+hardcore = True
 
 tIMEOUT :: Int
 tIMEOUT = 5000000

@@ -21,7 +21,7 @@ import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck
 
 hardcore :: Bool
-hardcore = False
+hardcore = True
 
 newtype Flip f y x = Flip
     { unFlip :: f x y

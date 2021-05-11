@@ -11,6 +11,9 @@ module Lib
     , ifoldl'
     ) where
 
+import           Data.Coerce
+import           Data.Functor.Compose
+
 data Nat = Z | S Nat
 
 data Vec n a where
@@ -26,5 +29,18 @@ ifoldr f z = go where
     go (Cons x xs) = f x $ go xs
 {-# INLINE ifoldr #-}
 
+newtype IFoldlMotive a n = IFoldlMotive
+    { unIFoldlMotive :: forall b. (forall m. b m -> a -> b ('S m)) -> b 'Z -> b n
+    }
+
 ifoldl' :: (forall m. b m -> a -> b ('S m)) -> b 'Z -> Vec n a -> b n
-ifoldl' _ _ = undefined
+ifoldl' f0 z0 xs = unIFoldlMotive (ifoldr fm zm xs) f0 z0 where
+    fm x (IFoldlMotive h) = IFoldlMotive $ \f z ->
+        getCompose $ h (coerceF f) $! Compose (f z x)
+    zm = IFoldlMotive $ \f z -> z
+
+    coerceF
+        :: forall b p a.
+           (forall m. b m -> a -> b ('S m))
+        -> Compose b 'S p -> a -> Compose b 'S ('S p)
+    coerceF f = coerce (f :: b ('S p) -> a -> b ('S ('S p)))

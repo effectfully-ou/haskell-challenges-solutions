@@ -12,7 +12,7 @@ import           System.IO.Unsafe
 import           Test.HUnit
 
 hardcore :: Bool
-hardcore = False
+hardcore = True
 
 withTrace :: ((forall b. a -> b -> b) -> c) -> IO ([a], c)
 withTrace k = do
