@@ -39,8 +39,8 @@ ifoldl' f0 z0 xs = unIFoldlMotive (ifoldr fm zm xs) f0 z0 where
         getCompose $ h (coerceF f) $! Compose (f z x)
     zm = IFoldlMotive $ \f z -> z
 
+     -- A simplified version by David Feuer: https://gist.github.com/effectfully/fa8a4d1da8d7ffad199451ce85b15c91#gistcomment-3739350
     coerceF
-        :: forall b p a.
-           (forall m. b m -> a -> b ('S m))
+        :: (b ('S p) -> a -> b ('S ('S p)))
         -> Compose b 'S p -> a -> Compose b 'S ('S p)
-    coerceF f = coerce (f :: b ('S p) -> a -> b ('S ('S p)))
+    coerceF = coerce
