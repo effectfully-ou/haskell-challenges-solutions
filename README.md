@@ -1,4 +1,10 @@
-# Haskell challenges
+# Haskell challenges solutions
+
+This is a repo with solutions to [haskell-challenges](https://github.com/effectfully-ou/haskell-challenges). 
+
+THERE AREN'T GOING TO BE NEW CHALLENGES ANY TIME SOON, SO CONSIDER TERMINATING YOUR SUBSCRIPTION
+
+## Haskell challenges README
 
 This repo contains some challenges to solve. Challenges are Haskell-specific (even [GHC](https://www.haskell.org/ghc)-specific, I guess) and most of them likely do not translate to other programming languages. Each challenge is a standalone [`stack`](https://docs.haskellstack.org/en/stable/README) project (contributing support for [`cabal`](https://www.haskell.org/cabal) would be highly appreciated).
 
