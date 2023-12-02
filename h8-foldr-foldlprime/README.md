@@ -21,3 +21,5 @@ Rules:
 7. don't worry about things being garbage-collected properly or asynchronous exceptions
 
 There's a small test suite. I run it with `stack test`.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/orikvm/foldr_via_foldl/).

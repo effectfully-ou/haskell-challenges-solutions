@@ -99,3 +99,5 @@ Conditions:
 6. inspecting the heap directly using tools that GHC provides (e.g. via [`ghc-heap-view`](https://hackage.haskell.org/package/ghc-heap-view)) or libraries that are powered by those tools (e.g. [`nothunks`](https://hackage.haskell.org/package/nothunks)) is considered cheating
 
 There's a small test suite. I run it with `stack test`.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/kz6t1g/challenge_inspect_what_a_function_forces/).

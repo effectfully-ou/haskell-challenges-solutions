@@ -34,3 +34,5 @@ And there's a hardcore mode (turned off by default, change `hardcore = False` to
 Replace `forceElems = undefined` in [`src/Lib.hs`](src/Lib.hs) with an actual definition of `forceElems`.
 
 There's a small test suite. I run it with `stack test`.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/kuq1e3/challenge_forceelems_for_any_traversable/).

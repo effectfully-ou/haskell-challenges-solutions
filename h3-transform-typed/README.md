@@ -66,3 +66,5 @@ Conditions:
 2. don't worry about accidentally making underlying functions strict or laziness in general
 
 There's a small test suite. I run it with `stack test`.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/l4cwcw/challenge_transform_a_function_stored_in_an/).

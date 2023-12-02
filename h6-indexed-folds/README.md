@@ -35,3 +35,5 @@ ifoldl' :: (forall m. b m -> a -> b ('S m)) -> b 'Z -> Vec n a -> b n
 There's a hardcore mode of the challenge that imposes an additional requirement: `ifoldl'` has to run in linear time. The hardcore mode is disabled by default, to enable it go to [test/Main.hs](./test/Main.hs) and replace `hardcore = False` with `hardcore = True`.
 
 There's a small test suite. I run it with `stack test`.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/n7ytm5/indexed_folds/).

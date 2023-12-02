@@ -85,3 +85,5 @@ There's a small test suite. Running it via `stack test` gives me the following (
 
   Productivity  91.8% of total user, 91.8% of total elapsed
 ```
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/lz916i/largest_powers/).

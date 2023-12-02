@@ -96,3 +96,5 @@ The hardcore mode is disabled by default, to enable it go to [test/Main.hs](./te
 There's a small test suite. I run it with `stack test`.
 
 This is an April Fools' Day edition where the fool is me who thought that it wouldn't be hard to write a test suite for this task: I've spent several days trying to find an optimal set of parameters that triggers as many errors as possible while reporting false positives with reasonably small probability (testing concurrent IO without mocking is no easy task) without the test suite taking minutes to run. If you're getting an error having "got a deadlock" in it, try increasing the `tIMEOUT` constant in [`test/Main.hs`](test/Main.hs) (if tests still fail, probably there's a problem indeed).
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/mia1fk/prerun_an_action/).

@@ -95,3 +95,5 @@ Rules:
 4. if there are multiple equal shortest sublists, all of them should be returned (i.e. you should not perform any deduplication)
 
 There's a small test suite. I run it with `stack test`. If you run the tests and see errors mentioning `x(x)` for some `x`, that's how an infinite list of `x`s is printed.
+
+Reddit [thread](https://www.reddit.com/r/haskell/comments/nitmvw/shortest_longest/).
